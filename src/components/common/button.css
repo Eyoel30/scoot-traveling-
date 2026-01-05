@@ -1,0 +1,10 @@
+@layer button{
+  .button{
+    /* display: block; */
+    background: var(--c-yellow);
+    width: fit-content;
+    color: var(--c-white);
+    padding: 14px 40px;
+    font-family: var(--ff-mono);
+  }
+}

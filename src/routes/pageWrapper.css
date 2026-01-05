@@ -1,0 +1,18 @@
+@layer layout{
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr calc(100% - 64px) 1fr;
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      grid-template-columns: 1fr min(calc(100% - 80px), calc(1110 / 16 * 1rem) ) 1fr;
+    }
+     
+
+    > *{
+      grid-column: 2;
+    }
+    > .fullbleed{
+      grid-column: 1 / -1;
+    }
+  }
+}

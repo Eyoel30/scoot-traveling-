@@ -1,0 +1,37 @@
+@layer header {
+  .header {
+    padding-block: 20px;
+    align-items: center;
+
+    .header-logo,
+    .header-links {
+      grid-row: 1;
+    }
+
+    .header-logo {
+      justify-self: center;
+      width: calc(75 / 16 * 1rem);
+
+      @media (width >=calc(700 / 16 * 1rem)) {
+        justify-self: start;
+        width: calc(108 / 16 * 1rem)
+      }
+    }
+
+    .header-links {
+      justify-self: start;
+      display: grid;
+      align-items: center;
+
+      @media (width >=calc(700 / 16 * 1rem)) {
+        padding-left: 167px;
+        width: 100%;
+      }
+
+      /* @media (width >=calc(1000 / 16 * 1rem)) {
+        justify-self: stretch;
+        margin-inline-start: 167px; 
+      } */
+    }
+  }
+}

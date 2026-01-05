@@ -1,0 +1,116 @@
+@layer topnav {
+  .topnav {
+    &::before {
+      content: '';
+      position: fixed;
+      inset: 69px 0 0 0;
+      background: var(--c-black-overlay);
+      /* translate: 100% 0; */
+      opacity: 0;
+      pointer-events: none;      /*makes an element invisible to the mouse */
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &:has(.topnav__open[aria-expanded='true'])::before {  /*conditional toggling the opacity*/
+      opacity: 1;
+    }
+  }
+
+  .topnav button {
+    /* display: block; */
+    translate: 0 2px;
+    background: none;
+    border: none;
+    padding: 0;
+
+    /* hides hamburges and close button on tab and desktop */
+    @media (width >=calc(700 / 16 * 1rem)) {
+      display: none;
+    }
+  }
+
+  /* hides hamburger menu */
+  .topnav__open[aria-expanded='true'] {
+    display: none;
+
+
+    /* when menu is opend */
+    +.topnav__menu .topnav__menu-content {
+      /*selects topnav_menu if it is a direct sibling of topnav__open with the attribut of aria.. True*/
+      translate: 0;
+
+      @media (prefers-reduced-motion) {
+        opacity: 1;
+      }
+    }
+
+    +.topnav__menu-content::before {
+      opacity: 1;
+    }
+
+    +.topnav__menu .topnav__close {
+      display: block;
+    }
+  }
+
+  .topnav__close {
+    display: none;
+    margin-inline-start: auto;
+    margin-block-end: 8rem;
+    position: absolute;
+    top: 24px;
+    /* translate: 0 -100%; */
+  }
+
+  /* hiding if menu isn't clicked/opened  */
+  .topnav__menu-content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (width < calc(700 / 16 * 1rem)) {
+      flex-direction: column;
+      position: fixed;
+      inset: 69px 120px 0 0;
+      padding: 64px 32px 24px;
+      background-color: var(--c-xdark-navy);
+      translate: -100vw 0;
+      transition: translate 0.5s ease-in-out;
+
+    }
+
+    @media (width < calc(700 / 16 * 1rem)) and (prefers-reduced-motion) {
+      translate: 0;
+      opacity: 0;
+      transition: opacity 500ms ease-in-out;
+    }
+
+
+  }
+
+  .topnav__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+
+    @media (width < calc(700 / 16 * 1rem)) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  .topnav__item {
+    list-style-type: none;
+  }
+
+  .topnav__link {
+    font-weight: 700;
+    font-family: var(--ff-mono);
+    color: var(--c-light-gray);
+
+    @media (width >=calc(700 / 16 * 1rem)) {
+      color: var(--c-dim-gray);
+    }
+  }
+}

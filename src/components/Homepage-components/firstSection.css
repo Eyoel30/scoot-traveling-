@@ -1,0 +1,76 @@
+@layer hero {
+  .hero {
+
+    >* {
+      grid-row: 1;
+    }
+
+    .hero-picture {
+      max-height: 100vh;
+      overflow: clip;
+    }
+
+    .hero-img {
+      width: 100%
+    }
+
+    .hero-content {
+      color: var(--c-white);
+      align-self: center;
+      display: grid;
+      justify-items: center;
+      translate: 0 -24px;
+      /* margin-inline: auto; */
+      text-align: center;
+
+      @media (width >=calc(700 / 16 * 1rem)) {
+        max-width: 70%;
+      }
+
+      @media (width >=calc(1000 / 16 * 1rem)) {
+        justify-items: start;
+        text-align: left;
+        max-width: 57ch;
+      }
+
+    }
+
+    p,
+    .button {
+      @media (width >=calc(1000 / 16 * 1rem)) {
+        margin-inline-start: 95px;
+      }
+    }
+
+    p {
+      margin-block: 24px 32px;
+    }
+
+    .hero-r-arrow {
+      justify-self: start;
+      align-self: end;
+      translate: -245px -34px;
+
+      @media (width >=calc(700 / 16 * 1rem)) {
+        translate: -100px -32px;
+      }
+    }
+
+    .hero-circles {
+      display: none;
+
+      @media(width >=calc(700 / 16 * 1rem)) {
+        display: block;
+        justify-self: end;
+        align-self: end;
+        translate: 30px -45px;
+      }
+    }
+  }
+}
+
+
+
+/* use padding for spacing b/n element and parent 
+and use margin for spacing between siblings */
+/* you can control the width of the text in two ways the || first one is my lemeating the width of the grid cell when the items are located in by setting the max-width and using the margin-inline auto to strach the whole grid because when setting the max-width by default it reatract the container to the left and living a space in the right || and the second one is just by setting the max width on the text items that you want to adjest the size of || so the difference is that the frist one also limit the size of the container and the second one only limit the size of the items inside the container   */
