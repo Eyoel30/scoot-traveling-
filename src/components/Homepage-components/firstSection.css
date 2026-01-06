@@ -17,6 +17,7 @@
     .hero-content {
       color: var(--c-white);
       align-self: center;
+      justify-self: center;
       display: grid;
       justify-items: center;
       translate: 0 -24px;
@@ -28,9 +29,11 @@
       }
 
       @media (width >=calc(1000 / 16 * 1rem)) {
+        justify-self: start;
         justify-items: start;
         text-align: left;
         max-width: 57ch;
+        translate: 0;
       }
 
     }
@@ -46,13 +49,30 @@
       margin-block: 24px 32px;
     }
 
+    .hero-l-arrow {
+      display: none;
+
+      @media (width >=calc(1000 / 16 * 1rem)) {
+        display: block;
+        align-self: center;
+        translate: -140px 30px;
+      }
+    }
+
     .hero-r-arrow {
       justify-self: start;
       align-self: end;
       translate: -245px -34px;
+      grid-column: 1 / -1;
 
       @media (width >=calc(700 / 16 * 1rem)) {
         translate: -100px -32px;
+      }
+
+      @media (width >=calc(1000 / 16 * 1rem)) {
+        translate: 530px 100px;
+        grid-column: 2;
+        align-self: center;
       }
     }
 
@@ -60,11 +80,19 @@
       display: none;
 
       @media(width >=calc(700 / 16 * 1rem)) {
-        display: block;
+        display: none;
         justify-self: end;
         align-self: end;
         translate: 30px -45px;
       }
+      @media(width >=calc(1000 / 16 * 1rem)){
+        display: none;
+      }
+       @media(width >=calc(1300 / 16 * 1rem)){
+        display: block;
+        align-self: center;
+        translate: 30px 130px;
+       }
     }
   }
 }
