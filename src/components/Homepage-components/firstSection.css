@@ -80,7 +80,7 @@
       display: none;
 
       @media(width >=calc(700 / 16 * 1rem)) {
-        display: none;
+        display: block;
         justify-self: end;
         align-self: end;
         translate: 30px -45px;

@@ -1,0 +1,26 @@
+@layer features {
+  .features{
+    .features-sm{
+      display: grid;
+      gap: 48px;
+      padding-block: 120px;
+    }
+    .feature-sm{
+      display: grid;
+      gap: 24px;
+      text-align: center;
+      justify-items: center;
+      
+    }
+    .feature-sm-img{
+      width: 56px;
+      height:56px;
+    }
+    .feature-sm-title{
+      color: var(--c-dark-navy);
+    }
+    .feature-sm-descr{
+      color: var(--c-dim-grey);
+    }
+  }
+}

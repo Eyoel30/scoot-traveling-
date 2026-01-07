@@ -1,9 +1,10 @@
 @layer topnav {
   .topnav {
+    z-index: 10;
     &::before {
       content: '';
       position: fixed;
-      inset: 69px 0 0 0;
+      inset: 60px 0 0 0;
       background: var(--c-black-overlay);
       /* translate: 100% 0; */
       opacity: 0;
@@ -58,7 +59,7 @@
     margin-inline-start: auto;
     margin-block-end: 8rem;
     position: absolute;
-    top: 24px;
+    top: 18px;
     /* translate: 0 -100%; */
   }
 
@@ -70,7 +71,7 @@
     @media (width < calc(700 / 16 * 1rem)) {
       flex-direction: column;
       position: fixed;
-      inset: 69px 120px 0 0;
+      inset: 60px 120px 0 0;
       padding: 64px 32px 24px;
       background-color: var(--c-xdark-navy);
       translate: -100vw 0;

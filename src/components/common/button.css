@@ -5,6 +5,7 @@
     width: fit-content;
     color: var(--c-white);
     padding: 14px 40px;
+    color: var(--c-xdark-navy);
     font-family: var(--ff-mono);
   }
 }

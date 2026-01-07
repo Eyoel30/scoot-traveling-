@@ -1,6 +1,7 @@
 import FeatureSmall from "./feature_small"
 import FeatureLarg from "./feature_larg"
 import { feature_small, feature_larg } from "../../data/feature_data"
+import "./features.css"
 
 export default function Features() {
   return (

@@ -69,8 +69,8 @@
     --c-yellow: hsl(40, 97%, 58%);
     --c-xdark-navy: hsl(215, 14%, 23%);
     --c-dark-navy: hsl(216, 17%, 35%);
-    --c-dim-gray: hsl(217, 12%, 62%);
-    --c-light-gray: hsl(212, 41%, 93%);
+    --c-dim-grey: hsl(217, 12%, 62%);
+    --c-light-grey: hsl(212, 41%, 93%);
     --c-snow: hsl(214, 37%, 96%);
     --c-light-yellow: hsl(39, 100%, 94%);
     --c-black-overlay: hsla(0, 0%, 0%, 0.75);
@@ -101,7 +101,7 @@
     /*adjest hight in relation to width(not squied) */
   }
 
- 
+
 
   h1,
   h2,
@@ -113,6 +113,7 @@
 
   p {
     line-height: 1.6;
+    margin: 0;
   }
 
 
@@ -128,13 +129,21 @@
       list-style-type: none;
     }
   }
-}
 
-footer ul {
-  margin: 0;
-  padding: 0;
+  footer ul {
+    margin: 0;
+    padding: 0;
 
-  li {
-    list-style-type: none;
+    li {
+      list-style-type: none;
+    }
+  }
+  .visually-hidden{
+    position: absolute;
+    left: -10000px;
+    top:auto;
+    width: 1px;
+    height:1px;
+    overflow: hidden; 
   }
 }
