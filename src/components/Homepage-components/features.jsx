@@ -5,8 +5,9 @@ import "./features.css"
 
 export default function Features() {
   return (
-    <section className="wrapper features">
+    <section className="wrapper small features">
       <h2 className="visually-hidden">Features</h2>
+      <div className="gray-line"></div>
       <div className="features-sm">
         <FeatureSmall values={feature_small} />
       </div>
