@@ -1,6 +1,32 @@
 @layer features {
   .features {
 
+    .gray-line {
+      display: none;
+      position: relative;
+      background: var(--c-light-grey);
+      z-index: -1;
+
+      &.tablet {
+        @media(width >=calc(700 / 16 * 1rem)) and (width < calc(1000 / 16 * 1rem)) {
+          display: block;
+          left: calc(96px / 2);
+          translate: -50% 0;
+          width: 15px;
+          height: calc(100% + 20px);
+          grid-column: 1 / -1;
+          grid-row: 1 / 4;
+        }
+      }
+
+      /* &.desktop {} */
+
+      @media (width >=calc(1000 / 16 * 1rem)) {
+        display: block;
+        height: 15px;
+      }
+    }
+
     .features-sm {
       position: relative;
       display: grid;
@@ -8,28 +34,16 @@
 
       @media (width >=calc(700 / 16 * 1rem)) {
         grid-template-rows: 120px repeat(3, auto);
-        gap:0;
+        gap: 0;
         padding-block: 0 145px;
+      }
+      @media (width >= calc(1000 / 16 * 1rem)){
+        
       }
     }
   }
 
-  .gray-line {
-    display: none;
-    position: relative;
-    left: calc(96px / 2);
-    translate: -50% 0;
-    z-index: -1;
-    width: 15px;
-    height: calc(100% + 20px);
-    background: var(--c-light-grey);
-    grid-column: 1 / -1;
-    grid-row: 1 / 4;
 
-    @media(width >= calc(700 / 16 * 1rem)){
-       display: block;
-    }
-  }
 
   .feature-sm {
     grid-column: 1 / -1;
@@ -39,30 +53,31 @@
     justify-items: center;
     margin-block-end: 48px;
 
-    @media (width >=calc(700 / 16 * 1rem)) {
+    @media (width >=calc(700 / 16 * 1rem)) and (width < calc(1000 / 16 * 1rem)) {
       grid-template-columns: 96px 1fr;
       grid-template-rows: auto auto;
       gap: 28px 80px;
       text-align: left;
       justify-items: start;
-      grid-row-end: span 1;
-    }
+      /* grid-row-end: span 1; */
 
-    &:nth-child(2) {
-      grid-row-start: 2;
-    }
 
-    &:nth-child(3) {
-      grid-row-start: 3;
-    }
-    &:nth-child(4) {
-      grid-row-start: 4;
-    }
+      &:nth-child(2) {
+        grid-row-start: 2;
+      }
 
-    &:last-child {
-      margin-block-end: 0;
-    }
+      &:nth-child(3) {
+        grid-row-start: 3;
+      }
 
+      &:nth-child(4) {
+        grid-row-start: 4;
+      }
+
+      &:last-child {
+        margin-block-end: 0;
+      }
+    }
   }
 
   .feature-sm-img {
@@ -109,7 +124,7 @@
         /* height: calc(100% - 120px); 
         background: var(--c-light-grey);
         /* position: absolute; */
-        /* bottom: 120px;
+/* bottom: 120px;
           left: calc(100px + 96px / 2); 
       }
     } 
