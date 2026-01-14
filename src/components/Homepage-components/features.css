@@ -98,6 +98,36 @@
 
 
 
+  a {
+    text-decoration: none;
+  }
+
+  header ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  footer ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+  .visually-hidden{
+    position: absolute;
+    left: -10000px;
+    top:auto;
+    width: 1px;
+    height:1px;
+    overflow: hidden; 
+  }
+}
 
 
 /* @media (width >=calc(700 / 16 * 1rem)) {
