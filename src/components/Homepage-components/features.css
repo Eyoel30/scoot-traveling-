@@ -127,7 +127,62 @@
     height:1px;
     overflow: hidden; 
   }
+
+@layer cta {
+  .cta {
+
+    min-height: 240px;
+    align-items: center;
+
+    @media (width < calc(1100 / 16 * 1rem)) {
+      place-items: center;
+    }
+
+
+
+    .cta_picture,
+    .cta_text {
+      grid-row: 1;
+    }
+
+    .cta_picture {
+      height: 100%;
+    }
+
+    .cta_image {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta_text {
+      display: grid;
+
+      row-gap: 20px;
+
+
+      @media (width >=calc(700 / 16 * 1rem)) {
+        row-gap: 24px;
+      }
+
+      @media (width >=calc(1100 / 16 * 1rem)) {
+        grid-template-columns: repeat(2, auto);
+        justify-items: start;
+        align-items: center;
+      }
+
+      .button {
+        @media (width >=calc(1100 / 16 * 1rem)) {
+          justify-self: end;
+        }
+      }
+
+    }
+  }
+
 }
+
+
+
 
 
 /* @media (width >=calc(700 / 16 * 1rem)) {
