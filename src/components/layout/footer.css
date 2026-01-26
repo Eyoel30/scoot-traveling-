@@ -1,0 +1,22 @@
+@layer footer {
+  .footer {
+    padding-block: 64px 88px;
+    background: var(--c-xdark-navy);
+    color: var(--c-white);
+
+    @media (width >=calc(700 / 16 * 1rem)) {
+      padding-block: 32px;
+    }
+
+    .footer-content {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+
+      @media (width >=calc(700 / 16 * 1rem)) {
+        grid-template-columns: auto auto 1fr;
+      }
+    }
+  }
+}
