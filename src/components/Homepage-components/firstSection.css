@@ -102,3 +102,5 @@
 /* use padding for spacing b/n element and parent 
 and use margin for spacing between siblings */
 /* you can control the width of the text in two ways the || first one is my lemeating the width of the grid cell when the items are located in by setting the max-width and using the margin-inline auto to strach the whole grid because when setting the max-width by default it reatract the container to the left and living a space in the right || and the second one is just by setting the max width on the text items that you want to adjest the size of || so the difference is that the frist one also limit the size of the container and the second one only limit the size of the items inside the container   */
+
+/* use grid position attribures along with translate if you just us the translare alone the item is going to move with out taking the grid size into consideration giving a caractersits of moving by itself so when you use both like justify-self and translate it moves with respect of the justify value, just like in the case of the arrow uptop  */
