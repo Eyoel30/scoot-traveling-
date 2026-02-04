@@ -6,9 +6,11 @@ import "./features.css"
 export default function Features() {
   return (
     <section className="wrapper small features">
+    <div clasName="glay-line desktop-large"></div>
       <h2 className="visually-hidden">Features</h2>
-      <div className="gray-line"></div>
       <div className="features-sm">
+      <div clasName="glay-line desktop-small"></div>
+        <div className="gray-line tablet"></div>
         <FeatureSmall values={feature_small} />
       </div>
       <div className="features-lg">
