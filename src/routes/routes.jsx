@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom'
 // import Navegation from '../components/layout/Navbar'
+import "./pageWrapper.css"
 import Header from '../components/layout/Header'
 import Home from '../pages/Home'
 import Footer from '../components/layout/Footer'
 import About from '../pages/About'
 import Location from '../pages/Location'
 import Careers from '../pages/Careers'
-import "./pageWrapper.css"
 
 export default function AppRoutes() {
 
