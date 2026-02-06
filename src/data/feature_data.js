@@ -4,7 +4,8 @@ import ride from "../../assets/icons/ride.svg"
 import telemetry from "../../assets/images/telemetry.jpg"
 import nearyou from "../../assets/images/near-you.jpg"
 import payment from "../../assets/images/payments.jpg"
-
+import leftdownarrow from "../../assets/patterns/left-downward-arrow.svg"
+import rightarrow from "../../assets/patterns/right-arrow.svg"
 export const feature_small = [
   {
     image: local, header: "Locate with app", content: "Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away."
@@ -20,10 +21,10 @@ export const feature_small = [
 
 export const feature_larg = [
   {
-    image: telemetry,alt:"woment holding a phone", header: "Easy to use riding telemetry", content: "The Scoot app is available with riding telemetry. This means it can show you your average peed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app."
+    image: telemetry,alt:"woment holding a phone", header: "Easy to use riding telemetry", content: "The Scoot app is available with riding telemetry. This means it can show you your average peed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.", arrow:leftdownarrow, arroclass:"feature-lg-arrow", width:452, height:151
   },
   {
-    image: nearyou,alt:"", header: "Coming to a city near you", content: "Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure to let us know if you want to see us in your hometown. We’re aiming to let our scooters loose on 23 cities over the coming year."
+    image: nearyou,alt:"", header: "Coming to a city near you", content: "Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure to let us know if you want to see us in your hometown. We’re aiming to let our scooters loose on 23 cities over the coming year.", arrow:rightarrow, arroclass:"feature-lg-arrow-r", width:452, height:151
   },
   {
     image: payment,alt:"", header: "Zero hassle payments", content: "Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app.Need to pay later? No worries! You can defer payment for up to a month."
