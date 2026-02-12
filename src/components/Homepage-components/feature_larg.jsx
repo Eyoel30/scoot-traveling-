@@ -14,7 +14,9 @@ export default function FeatureLarg({ values }) {
             <p className="feature-lg-descr">{value.content}</p>
             <Button button={buttonValue} />
           </div>
-          {value.arrow && <img className={value.arroclass} src={value.arrow} width={value.width} height={value.height}/>}
+          <img className={value.arroclass_r} src={value.arrow_right} width={value.width} height={value.height}/>
+          <img className={value.arroclass_l} src={value.arrow_left} width={value.width} height={value.height}/>
+
         </div>
       )
       )}

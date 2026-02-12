@@ -21,13 +21,13 @@ export const feature_small = [
 
 export const feature_larg = [
   {
-    image: telemetry,alt:"woment holding a phone", header: "Easy to use riding telemetry", content: "The Scoot app is available with riding telemetry. This means it can show you your average peed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.", arrow:leftdownarrow, arroclass:"feature-lg-arrow", width:452, height:151
+    image: telemetry,alt:"woment holding a phone", header: "Easy to use riding telemetry", content: "The Scoot app is available with riding telemetry. This means it can show you your average peed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.",  arrow_right:rightarrow, arroclass_r:"feature-lg-arrow-r", width:452, height:151,arrow_left:leftdownarrow, arroclass_l:"feature-lg-arrow-l", width:741, height:151
   },
   {
-    image: nearyou,alt:"", header: "Coming to a city near you", content: "Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure to let us know if you want to see us in your hometown. We’re aiming to let our scooters loose on 23 cities over the coming year.", arrow:rightarrow, arroclass:"feature-lg-arrow-r", width:452, height:151
+    image: nearyou,alt:"", header: "Coming to a city near you", content: "Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure to let us know if you want to see us in your hometown. We’re aiming to let our scooters loose on 23 cities over the coming year.", arrow_right:rightarrow, arroclass_r:"feature-lg-arrow-r", width:452, height:151, arrow_left:leftdownarrow, arroclass_l:"feature-lg-arrow-l", width:741, height:151
   },
   {
-    image: payment,alt:"", header: "Zero hassle payments", content: "Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app.Need to pay later? No worries! You can defer payment for up to a month."
+    image: payment,alt:"", header: "Zero hassle payments", content: "Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app.Need to pay later? No worries! You can defer payment for up to a month.", arrow_right:rightarrow, arroclass_r:"feature-lg-arrow-r", width:452, height:151,arrow_left:leftdownarrow, arroclass_l:"feature-lg-arrow-l", width:741, height:151
   }
 ]
 

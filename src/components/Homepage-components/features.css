@@ -147,9 +147,10 @@
   .features-lg {
     display: grid;
     row-gap: 120px;
-    
+    padding-block-end: 120px;
+
     .feature-lg {
-      display: grid;
+      /* display: grid; */
       row-gap: 56px;
     }
 
@@ -181,13 +182,47 @@
     .feature-lg-descr {
       color: var(--c-dim-grey)
     }
-    .feature-lg-arrow{
-      height: 151px;
+
+    .feature-lg-arrow-l,
+    .feature-lg-arrow-r {
+      height: 138px;
       object-fit: cover;
-      object-position: left bottom;
-      align-self: end;
-      grid-column: 2 / -1;
+      
       grid-row: 1 / 2;
+
+    }
+
+    .feature-lg-arrow-l {
+      grid-column: 2 / -1;
+      align-self: end;
+      object-position: left bottom;
+    }
+
+    .feature-lg-arrow-r {
+      grid-column: 1 / 5;
+      object-position: right bottom;
+      translate: -80px 0;
+    }
+
+    .feature-lg:nth-child(1), .feature-lg:nth-child(3){
+      .feature-lg-arrow-r{
+        display:none;
+      }
+    }
+    .feature-lg:nth-child(2) {
+      .feature-lg-arrow-l {
+        display: none;
+
+      }
+    }
+    .feature-lg:nth-child(3) {   
+      .feature-lg-arrow-l {
+        grid-column: 3 / -1;
+        align-self: start;
+        
+        translate: 20px 0;
+
+      }
     }
   }
 }
