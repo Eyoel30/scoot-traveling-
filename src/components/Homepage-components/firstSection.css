@@ -1,6 +1,6 @@
 @layer hero {
   .hero {
-
+    overflow-x: clip;
     >* {
       grid-row: 1;
     }

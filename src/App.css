@@ -101,7 +101,12 @@
     /*adjest hight in relation to width(not squied) */
   }
 
-
+  h1,
+  h2,
+  h3,
+  p {
+    text-wrap: balance;
+  }
 
   h1,
   h2,
@@ -138,18 +143,13 @@
       list-style-type: none;
     }
   }
-  .visually-hidden{
+
+  .visually-hidden {
     position: absolute;
     left: -10000px;
-    top:auto;
+    top: auto;
     width: 1px;
-    height:1px;
-    overflow: hidden; 
+    height: 1px;
+    overflow: hidden;
   }
 }
-
-
-
-
-
-
