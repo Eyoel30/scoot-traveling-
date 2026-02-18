@@ -164,6 +164,11 @@
       @media (width >=calc(700 / 16 * 1rem)) {
         grid-column: 3 / span 4;
       }
+
+      @media (width >=calc(1000 / 16 * 1rem)){
+        grid-column: span 5 / -2;
+        grid-row: 1 / 2;
+      }
     }
 
     .feature-lg-text {
@@ -178,6 +183,15 @@
       @media (width >=calc(700 / 16 * 1rem)) {
         grid-column: 2 / -2;
         padding-inline: 80px; 
+      }
+
+      @media (width >=calc(1000 / 16 * 1rem)){
+        padding-inline: 0px;
+        grid-column: 2 / span 6;
+        grid-row: 1 / span 1;
+        align-self: center;
+        text-align: start;
+        justify-items: start;
       }
     }
 
@@ -200,7 +214,7 @@
       min-height: 138px;  /*look back at this */
       object-fit: cover;
       grid-row: 1 / 2;
-
+      z-index: 1;
     }
 
     .feature-lg-arrow-l {
@@ -212,6 +226,9 @@
         width:100%;
         object-fit: cover;        
       }
+      @media (width >=calc(1000 / 16 * 1rem)){
+        grid-column: 8 / -2;
+      }
 
     }
 
@@ -219,8 +236,25 @@
       grid-column: 1 / 5;
       object-position: right bottom;
       translate: -80px 0;
+      @media(width >=calc(700 / 16 * 1rem)){
+        translate: -50px 0;
+      }
     }
 
+    .feature-lg-c{
+      display:none;
+      @media (width >=calc(700 / 16 * 1rem)){
+        display: block;
+        grid-row: 1 / 2; 
+        grid-column: 3 / span 4;
+        justify-self: center;
+        translate: calc(100% + 80px) 0;
+      }
+      @media (width >=calc(1000 / 16 * 1rem)){
+        grid-column: span 5 / -2;
+        translate: calc(100% + 64px) 0;
+      }
+    }
     .feature-lg:nth-child(1),
     .feature-lg:nth-child(3) {
       .feature-lg-arrow-r {
@@ -231,7 +265,12 @@
     .feature-lg:nth-child(2) {
       .feature-lg-arrow-l {
         display: none;
-
+      }
+      .feature-lg-c{
+        grid-column: 3 / span 4;
+        translate: 0;
+        justify-self: center;
+        translate: calc(-100% - 64px) 0 ;
       }
     }
 
@@ -241,6 +280,13 @@
         align-self: start;
 
         translate: 20px 0;
+
+        @media (width >= calc(700 / 16 * 1rem)){
+          grid-column: 5 / -1;
+          /* align-self: center; */
+          translate: 40px 80px;
+          
+        }
 
       }
     }
